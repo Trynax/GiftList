@@ -9,7 +9,7 @@ const serverUrl = 'http://localhost:1225';
 
 async function main() {
   // TODO: how do we prove to the server we're on the nice list? 
-  const name = "Trynax";
+  const name = "Kelvin Lesch";
   const index = niceList.findIndex(n => n ===name);
   const merkleTree = new MerkleTree(niceList)
   const proof = merkleTree.getProof(index)
