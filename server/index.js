@@ -7,13 +7,13 @@ const port = 1225;
 
 const merkleTree = new MerkleTree(niceList)
 
-const MERKLE_ROOT = merkleTree.getRoot();
+
 const app = express();
 app.use(express.json());
 
 // TODO: hardcode a merkle root here representing the whole nice list
 // paste the hex string in here, without the 0x prefix
-const MERKLE_ROOT = '';
+const MERKLE_ROOT = merkleTree.getRoot();
 
 app.post('/gift', (req, res) => {
   // grab the parameters from the front-end here
